@@ -1,0 +1,23 @@
+aside {
+    min-width: 68px;
+    
+    background-image: url(/img/sidebar-bg.png);
+    background-color: #051e34;
+}
+
+.my_contenitore {
+    padding-top: 59px;
+    height: 100vh;
+}
+
+header {
+    height: 120px;
+    background-color: #1b72e8;
+}
+
+
+@media screen and (min-width: 992px) {
+    aside {
+        min-width: 150px;
+    }
+}
