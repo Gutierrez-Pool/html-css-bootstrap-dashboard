@@ -21,7 +21,7 @@
 
 <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar fixed-top navbar-expand bg-body-tertiary">
         <div class="container-fluid">
             <a class="d-block d-lg-none" href="#">
                 <img src="img/mobile-logo.png" alt="mobile-logo" height="50">
@@ -30,44 +30,44 @@
                 <img src="img/logo.svg" alt="logo" width="" height="30">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
-            <form class="d-flex" role="search">
+            <form class="d-flex flex-grow-1" role="search">
                 <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
             </form>
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse d-flex" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" aria-current="page" href="#">
                             <i class="fa-solid fa-list"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" href="#">
                             <i class="fa-regular fa-circle-question"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropstart">
                         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-bell"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -127,13 +127,13 @@
             <!-- Header(?) -->
             <header class="container-fluid ">
                 <div class="row py-4">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-sm-4">
                         Boolean
                     </div>
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-sm-5">
                         Studenti
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-sm-3">
                         Nuovi studenti
                     </div>
                 </div>
@@ -149,10 +149,50 @@
                             <div class="card-header">
                                 Prossime classi
                             </div>
+
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="col-6 col-sm-5">
+                                        Nome
+                                    </div>
+                                    <div class="col-6 col-sm-7 d-flex justify-content-around text-center">
+                                        <span class="d-none d-md-block col-3">Data inizio</span>
+                                        <span class="d-none d-md-block col-3">ROI</span>
+                                        <span class="col-6 col-sm-3">Stato</span>
+                                        <span class="col-6 col-sm-3">Azioni</span>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item d-flex align-items-center">
+                                    <div class="col-6 col-sm-5">
+                                        <i class="fa-solid fa-code"></i> Classe 75
+                                    </div>
+                                    <div class="col-6 col-sm-7 d-flex justify-content-around text-center">
+                                        <span class="d-none d-md-block col-3">15 Feb 2021</span>
+                                        <span class="d-none d-md-block col-3">20%</span>
+                                        <span class="badge bg-primary rounded-pill col-6 col-sm-3">Done</span>
+                                        <div class="col-6 col-sm-3">
+                                            <span><i class="fa-solid fa-pencil"></i></span>
+                                            <span><i class="fa-solid fa-trash"></i></span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- <li class="list-group-item d-flex align-items-center d-none">
+                                    <div class="col-6 col-sm-5">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+                                    <div class="col-6 col-sm-7 d-flex justify-content-around text-center">
+                                        <span class="d-none d-md-block col-3"></span>
+                                        <span class="d-none d-md-block col-3"></span>
+                                        <span class="badge bg-primary rounded-pill col-6 col-sm-3"></span>
+                                        <div class="col-6 col-sm-3">
+                                            <span><i class="fa-solid fa-pencil"></i></span>
+                                            <span><i class="fa-solid fa-trash"></i></span>
+                                        </div>
+                                    </div>
+                                </li> -->
+
                             </ul>
                         </div>
                         
@@ -161,26 +201,67 @@
                             <div class="card-header">
                                 F.A.Q.
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      Come aggiungere un nuovo studente?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Clicca sul + in alto nella sezione blu.*
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      Come posso accedere alle informazioni del mio account?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Clicca sull'icona della campanella.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                      Posso usare questa dashboard da mobile?
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        Si
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
     
                     <div class="col-12 col-lg-4 ">
-
                         <!-- To Do -->
                         <div class="card mb-4" style="width: 100%;">
                             <div class="card-header">
                                 To Do
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
-                            </ul>
+                                <li class="list-group-item">
+                                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                  <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                                </li>
+                                <li class="list-group-item">
+                                  <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                  <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                                </li>
+                                <li class="list-group-item">
+                                  <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                  <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                                </li>
+                              </ul>
                         </div>
                         
                         <!-- Utenti attivi -->
