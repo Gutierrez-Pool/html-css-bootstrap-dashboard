@@ -6,16 +6,31 @@ aside {
 }
 
 .my_contenitore {
-    padding-top: 59px;
+    padding-top: 66px;
     height: 100vh;
 }
 
 header {
-    /* height: 120px; */
-    height: 236px;
     background-color: #1b72e8;
 }
 
+header .breadcrumb a {
+    text-decoration: none;
+}
+
+header .rounded-pill {
+    background-color: #165bba;
+}
+
+.fa-code {
+    padding-block: 6px;
+    padding-inline: 4px;
+
+    border-radius: 50%;
+
+    color: white;
+    background-color: #f26551;
+}
 
 @media screen and (min-width: 992px) {
     aside {
