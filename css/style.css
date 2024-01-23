@@ -36,5 +36,9 @@ header .rounded-pill {
     aside {
         min-width: 150px;
     }
+
+    header .offcanvas {
+        width: 60% !important;
+    }
 }
 

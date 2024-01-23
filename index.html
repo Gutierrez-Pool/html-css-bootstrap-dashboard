@@ -20,7 +20,7 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand bg-body-tertiary">
         <div class="container-fluid">
             <a class="d-block d-lg-none" href="#">
@@ -35,7 +35,11 @@
             </button> -->
 
             <form class="d-flex flex-grow-1" role="search">
-                <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" style="background-color: #e5e5e5;">
+                <div class="input-group ">
+                    <div class="input-group-text" style="background-color: #e5e5e5;"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search" style="background-color: #e5e5e5;">
+                </div>
                 <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
             </form>
             
@@ -127,7 +131,7 @@
             <!-- Header(?) -->
             <header class="container-fluid">
                 <div class="row text-white py-4">
-                    <div class="col-12 col-sm-4 col-lg-2 mb-3 order-sm-3">
+                    <div class="col-12 col-md-4 col-lg-2 mb-3 order-md-3">
                         <span class="pe-3">Nuovo Studente</span>
 
                         <span>
@@ -135,18 +139,18 @@
                                 <i class="fa-solid fa-plus"></i>
                             </button>
 
-                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas offcanvas-end w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
                                     <form class="row g-3">
-                                        <div class="col-12">
+                                        <div class="col-12 col-md-6">
                                             <label for="inputName" class="form-label">Nome</label>
                                             <input type="text" class="form-control" aria-label="First name">
                                         </div>
-                                        <div class="col-12">
+                                        <div class="col-12 col-md-6">
                                             <label for="inputLastname" class="form-label">Cognome</label>
                                             <input type="text" class="form-control" aria-label="Last name">
                                         </div>
@@ -195,7 +199,8 @@
                                           </div>
                                         </div>
                                         <div class="col-12">
-                                          <button type="submit" class="btn btn-primary">Salva</button>
+                                          <button type="submit" class="btn btn-primary fw-bold">Salva</button>
+                                          <button type="button" class="btn btn-warning fw-bold">Svuota</button>
                                         </div>
                                     </form>
                                 </div>
@@ -203,7 +208,7 @@
                         </span>
                     </div>
 
-                    <div class="col-12 col-sm-4 col-lg-6">
+                    <div class="col-12 col-md-4 col-lg-6">
                         <div class="d-flex align-items-baseline gap-2 pb-2">
                             <div class="fs-2">
                                 Boolean
@@ -239,7 +244,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 col-sm-4 col-lg-4">
+                    <div class="col-12 col-md-4 col-lg-4">
                         Studenti online negli ultimi 30 minuti
                         <div class="fs-2">
                             125
